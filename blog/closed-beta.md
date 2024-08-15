@@ -2,15 +2,16 @@
 title: Access the Loopscale Closed Beta
 # description: Announcing our Closed Beta, offering market efficiency and flexibility for on-chain capital markets via fixed-rate borrowing, diverse collateral support, and more.
 slug: closed-beta
-tags: [products]
-image: https://i.imgur.com/mErPwqL.png
+tags: ['#product']
+image: 'static/posts/closed-beta.png'
 hide_table_of_contents: false
 date: 06-04-2024
 ---
-
 Announcing our Closed Beta, offering market efficiency and flexibility for on-chain capital markets via fixed-rate borrowing, diverse collateral support, and more.
 
 <!-- truncate -->
+![](../static/img/posts/closed-beta.png)
+
 
 Loopscale is blockchain infrastructure that brings efficiency and flexibility to asset-based capital markets. It enables the compatibility of complex and long-tail collateral as well as configurability of loan structure. The Loopscale platform facilitates borrowing transactions ranging from DePIN participants financing hardware purchases with network tokens, whiskey traders leveraging existing inventory for purchase orders, and early employees at protocols seeking liquidity on locked assets.
 ‍

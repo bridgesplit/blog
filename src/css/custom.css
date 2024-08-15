@@ -105,6 +105,29 @@ html[data-theme=dark] {
   --docsearch-key-gradient: linear-gradient(-26.5deg,
       var(--ifm-color-emphasis-200) 0%,
       var(--ifm-color-emphasis-100) 100%);
+  --docusaurus-tag-list-border: transparent !important;
+}
+
+
+.tag_node_modules-\@docusaurus-theme-classic-lib-theme-TagsListInline-styles-module>a {
+  font-size: var(--caption-font-size) !important;
+  background-color: var(--primary-background-color);
+  color: var(--text-caption-color) !important;
+  border-radius: calc(var(--border-radius)/2);
+  padding: 2px 8px !important;
+  display: flex;
+  align-items: baseline;
+  height: min-content;
+  margin: 0px !important;
+  pointer-events: none !important;
+}
+
+.tag_node_modules-\@docusaurus-theme-classic-lib-theme-TagsListInline-styles-module>a:hover {
+  border: 0px !important;
+  padding: 2px 8px !important;
+  margin: 0px !important;
+
+
 }
 
 .homeContainer {
