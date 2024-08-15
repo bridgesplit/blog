@@ -1,0 +1,541 @@
+@font-face {
+  font-family: "Neue Montreal Regular";
+  src: local("NeueMontrealRegular"),
+    url("../../static/fonts/NeueMontrealRegular.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: "Neue Montreal Medium";
+  src: local("NeueMontrealMedium"),
+    url("../../static/fonts/NeueMontrealMedium.ttf") format("truetype"),
+}
+
+[data-theme=dark]:root,
+html[data-theme=dark] {
+  /* Base */
+  --primary-color: rgba(255, 255, 255, 0.95);
+  --primary-background-color: rgba(255, 255, 255, 0.10);
+  --primary-background-color-light: rgb(13, 13, 13);
+  --secondary-color: rgb(57, 78, 255);
+  --secondary-background-color: rgb(124, 91, 255, 0.2);
+
+  --text-body-color: rgba(255, 255, 255, 0.95);
+  --text-caption-color: rgba(255, 255, 255, 0.60);
+  --text-disabled-color: rgba(255, 255, 255, 0.40);
+  --text-button-primary-color: rgba(21, 13, 53, 0.95);
+  --background-color: rgb(0, 0, 0);
+  --background-card-color: var(--primary-background-color-light);
+  --divider-color: rgba(255, 255, 255, 0.07);
+  --divider-color-dark: rgba(255, 255, 255, 0.14);
+  --border-radius: 4px;
+  --body1-font-size: 16px;
+  --body2-font-size: 14px;
+  --caption-font-size: 12px;
+  --h1-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+  --h4-font-size: 16px;
+  --font-family: "Neue Montreal", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  --heading-font-wt: 500;
+  --card-padding: 16px;
+  --vertical-margin: 40px;
+  --input-padding: 10px;
+  --button-padding: 20px;
+  --button-height: 40px;
+  --max-width: 1100px;
+  --navbar-height: 70px;
+  /* --ifm-col-width: 100%; */
+  /* Infima */
+  --ifm-breadcrumb-padding-horizontal: 0rem;
+  --ifm-color-content-secondary: var(--text-caption-color);
+  --ifm-navbar-height: var(--navbar-height);
+  --ifm-color-primary: var(--primary-color);
+  --ifm-font-size-base: var(--body1-font-size);
+  --ifm-font-family-base: var(--font-family);
+  --ifm-global-radius: var(--border-radius);
+  --ifm-background-color: var(--background-color);
+  --ifm-background-surface-color: var(--background-card-color);
+  --ifm-button-background-color: var(--primary-color);
+  --ifm-footer-background-color: var(--background-color);
+  --ifm-color-content: var(--text-body-color);
+  --ifm-toc-border-color: var(--divider-color);
+  --ifm-font-weight-bold: var(--heading-font-wt);
+  --ifm-h1-font-size: var(--h1-font-size);
+  --ifm-h2-font-size: var(--h2-font-size);
+  --ifm-h3-font-size: var(--h3-font-size);
+  --ifm-h4-font-size: var(--h4-font-size);
+  --ifm-heading-color: var(--text-body-color);
+  --ifm-navbar-item-padding-horizontal: 5px;
+  --ifm-card-border-radius: var(--border-radius);
+  --ifm-container-width-xl: var(--max-width);
+  --ifm-container-width: var(--max-width);
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-link-color: var(--text-caption-color);
+  --ifm-link-color: var(--secondary-color);
+  --ifm-navbar-hover-color: var(--text-body-color);
+  --ifm-button-border-color: var(--divider-color);
+  --ifm-hr-background-color: var(--divider-color);
+  --ifm-menu-color: var(--text-caption-color);
+  --ifm-table-border-color: var(--divider-color);
+  --ifm-button-font-weight: 400;
+  --ifm-alert-padding-vertical: var(--card-padding);
+  --ifm-breadcrumb-separator: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 -800 800 800\" fill=\"white\" opacity=\"0.6\"><path d=\"M593.23-480 291.92-781.31q-11.92-11.92-11.61-28.38.31-16.46 12.23-28.39Q304.46-850 320.92-850t28.39 11.92l306.23 306.85q10.84 10.85 16.07 24.31 5.24 13.46 5.24 26.92t-5.24 26.92q-5.23 13.46-16.07 24.31L348.69-121.92q-11.92 11.92-28.07 11.61-16.16-.31-28.08-12.23-11.92-11.92-11.92-28.38t11.92-28.39L593.23-480Z\"/></svg>");
+  --ifm-breadcrumb-separator-filter: none;
+  --ifm-alert-padding-horizontal: var(--card-padding);
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml;utf8,<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M12.0064 10.3119L7.64776 14.6705C7.45287 14.8654 7.22696 14.9629 6.97005 14.9629C6.71314 14.9629 6.48724 14.8654 6.29235 14.6705C6.09745 14.4756 6 14.2497 6 13.9928C6 13.7359 6.10046 13.507 6.30138 13.3061L11.3419 8.26553C11.4376 8.17694 11.5413 8.1105 11.6529 8.0662C11.7645 8.02191 11.8841 7.99976 12.0117 7.99976C12.1392 7.99976 12.2588 8.02191 12.3705 8.0662C12.4821 8.1105 12.5822 8.17694 12.6708 8.26553L17.7113 13.3061C17.9123 13.507 18.0083 13.7315 17.9994 13.9795C17.9906 14.2276 17.8887 14.4491 17.6938 14.644C17.4989 14.8389 17.273 14.9363 17.0161 14.9363C16.7592 14.9363 16.5333 14.8389 16.3384 14.644L12.0064 10.3119Z\" fill=\"white\" fill-opacity=\"0.6\"/></svg>");
+  /* Search */
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--text-caption-color);
+  --docsearch-container-background: transparent;
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-modal-shadow: none;
+  --docsearch-searchbox-background: transparent;
+  --docsearch-searchbox-focus-background: transparent;
+  --docsearch-searchbox-shadow: none !important;
+  --docsearch-searchbox-height: var(--button-height);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-font-color-base);
+  --docsearch-footer-shadow: none;
+  --docsearch-footer-background: transparent;
+  --docsearch-hit-background: transparent;
+  --docsearch-highlight-color: var(--secondary-color);
+  --docsearch-hit-height: 64px;
+  --ifm-breadcrumb-item-background-active: transparent;
+  --docsearch-key-gradient: linear-gradient(-26.5deg,
+      var(--ifm-color-emphasis-200) 0%,
+      var(--ifm-color-emphasis-100) 100%);
+}
+
+.homeContainer {
+  /* height: calc(100vh -70px) !important; */
+
+}
+
+article:has(.homeContainer)>header {
+  display: none;
+}
+
+main:has(.homeContainer) {
+  /* background-color: red; */
+  max-width: 100% !important;
+  flex: 1 !important;
+
+}
+
+button.DocSearch {
+  display: none !important;
+}
+
+.DocSearch-Hit-source {
+  color: var(--text-caption-color) !important;
+  font-weight: 400 !important;
+  font-size: var(--body2-font-size) !important;
+}
+
+.DocSearch-Hit a {
+  border-radius: var(--border-radius) !important;
+  border: 1px solid var(--divider-color);
+  box-shadow: none !important;
+  padding-left: var(--input-padding) !important;
+  padding-right: var(--input-padding) !important;
+
+}
+
+.searchResultItem_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module h2 {
+  font-size: var(--ifm-h3-font-size);
+}
+
+.searchResultItem_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module p {
+  font-size: var(--body2-font-size);
+}
+
+.search-result-match {
+  background: var(--secondary-background-color) !important;
+}
+
+.DocSearch-HitsFooter a {
+  border-bottom: 0px !important;
+}
+
+.DocSearch-Hit-title {
+  font-size: var(--body2-font-size) !important;
+}
+
+.DocSearch-Hit-path {
+  font-weight: 400 !important;
+  font-size: var(--caption-font-size) !important;
+}
+
+.DocSearch-Hit-content-wrapper {
+  line-height: inherit !important;
+
+}
+
+.DocSearch-Logo {
+  display: none;
+}
+
+a[aria-label="Search by Algolia"] {
+  display: none;
+}
+
+.searchResultsColumn_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module {
+  font-weight: 400 !important;
+  color: var(--text-caption-color);
+}
+
+.DocSearch-Hit-Container {
+  padding: 0px !important;
+  /* height: auto !important; */
+}
+
+.DocSearch-Hit[aria-selected=true] a {
+  background-color: var(--background-card-color) !important;
+
+}
+
+
+.DocSearch-Hit {
+  padding-bottom: var(--input-padding) !important;
+}
+
+/* General */
+@media (min-width: 997px) {
+  :root {
+    --doc-sidebar-width: 250px !important;
+    --blog-sidebar-width: 250px !important;
+
+
+
+  }
+
+
+  .container .row:nth-child(2) {
+    padding-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+  }
+
+}
+
+@media (max-width: 997px) {
+
+  article {
+    padding: 0 var(--ifm-spacing-horizontal);
+  }
+
+  .col {
+    padding: var(--ifm-spacing-horizontal) var(--ifm-spacing-horizontal);
+
+  }
+
+  .DocSearch.DocSearch-Button {
+    border-radius: 100px !important;
+    height: var(--button-height);
+    width: var(--button-height);
+    justify-content: center;
+    padding: 0px !important;
+    padding-bottom: 2px !important;
+  }
+}
+
+.container {
+  margin-bottom: var(--vertical-margin) !important;
+
+}
+
+.pagination-nav {
+  display: none !important;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+.tb_col--200px {
+  width: 200px;
+}
+
+b {
+  font-weight: 500;
+}
+
+p a {
+  color: var(--secondary-color);
+}
+
+/* Alert */
+.alert--secondary {
+  --ifm-alert-background-color: var(--secondary-background-color);
+  --ifm-alert-border-color: var(--secondary-background-color);
+  --ifm-alert-shadow: none;
+  --ifm-alert-foreground-color: var(--secondary-color);
+}
+
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module {
+  display: none !important;
+
+}
+
+
+
+/* Button */
+.button {
+  height: var(--button-height) !important;
+  padding: var(--button-padding) !important;
+  align-items: center !important;
+  display: flex !important;
+  font-size: var(--ifm-font-size-base);
+  background-color: var(--primary-background-color) !important;
+  color: var(--text-body-color) !important;
+  border: none !important;
+}
+
+.button--contained {
+  background-color: var(--primary-color) !important;
+  color: var(--text-button-primary-color) !important;
+
+}
+
+.button--outline {
+  background-color: transparent !important;
+  border: 1px solid var(--divider-color) !important;
+}
+
+.button:hover {
+  background-color: var(--primary-background-color) !important;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.navbar__logo {
+  height: 1.25rem;
+
+}
+
+.navbar__toggle>svg {
+  height: 24px;
+  color: var(--text-caption-color);
+}
+
+.navbar-sidebar__close>svg {
+  height: 16px;
+}
+
+.navbar__link {
+  font-weight: 400;
+}
+
+
+
+.navbar__tooltip {
+  visibility: hidden;
+  background-color: var(--background-card-color);
+  color: var(--text-caption-color);
+  font-size: var(--caption-font-size);
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  width: max-content;
+  z-index: 1;
+  top: 100%;
+  left: -25%;
+
+}
+
+/* Tooltip text */
+.navbar__link-disabled {
+  position: relative;
+  color: var(--text-disabled-color);
+  cursor: pointer;
+
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.navbar__link-disabled:hover .navbar__tooltip {
+  visibility: visible;
+}
+
+
+
+
+.navbar__brand,
+.navbar__brand:hover {
+  color: var(--text-body-color);
+  align-items: center;
+
+}
+
+/* Footer */
+.footer__title {
+  font-weight: var(--heading-font-wt);
+  color: var(--text-caption-color);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--background-color);
+  border-top: 2px solid var(--divider-color);
+
+}
+
+footer>.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: top;
+}
+
+
+
+.footer__logo {
+  margin-top: 0px !important;
+}
+
+/* Sidebar */
+html[data-theme='dark'] .menu__caret:before,
+html[data-theme='dark'] .menu__link--sublist-caret:after {
+  filter: none !important;
+  background-size: 1.5rem 1.5rem;
+
+}
+
+.menu {
+  padding: 1.5rem 1rem !important;
+  font-size: var(--body1-font-size) !important;
+  font-weight: 400 !important;
+}
+
+.tocCollapsible_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-styles-module {
+  display: none;
+}
+
+.navbar-sidebar__back {
+  border-radius: var(--border-radius);
+}
+
+
+/* Search */
+.DocSearch-Modal {
+  border-radius: var(--border-radius) !important;
+  border: 1px solid var(--divider-color);
+  margin-top: 60px !important;
+  /* margin-bottom: 50% !important; */
+}
+
+.DocSearch-Input {
+  font-size: var(--ifm-font-size-base) !important;
+}
+
+.DocSearch-Form {
+  border: 1px solid var(--divider-color) !important;
+
+}
+
+.DocSearch-Container {
+  background-color: rgba(0, 0, 0, 0.50) !important;
+}
+
+.DocSearch-Button {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border: 1px solid var(--divider-color) !important;
+  border-radius: var(--border-radius) !important;
+  padding: var(--input-padding) calc(var(--input-padding) * 1.5) !important;
+  height: var(--button-height) !important;
+}
+
+.DocSearch-Search-Icon {
+  height: 16px !important;
+  width: 16px !important;
+  color: var(--text-caption-color) !important;
+}
+
+.DocSearch-Button-Keys {
+  padding-top: 2px;
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: var(--ifm-font-size-base) !important;
+  font-weight: 400 !important;
+
+}
+
+.DocSearch-Footer {
+  border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+  border-top: 1px solid var(--divider-color);
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+  color: var(--text-caption-color) !important;
+}
+
+/* Card */
+
+.card {
+  border: 1px solid var(--divider-color);
+}
+
+a>.card:hover {
+  border: 1px solid var(--divider-color-dark)
+}
+
+.card.disabled * {
+  color: var(--text-disabled-color) !important;
+}
+
+/* Markdown */
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.markdown h2 {
+  --ifm-h2-font-size: var(--h2-font-size);
+}
+
+.markdown h3 {
+  --ifm-h3-font-size: var(--h3-font-size);
+}
+
+.markdown h4 {
+  --ifm-h4-font-size: var(--h4-font-size);
+}
+
+.markdown img {
+  margin-top: calc(var(--ifm-heading-vertical-rhythm-top)* var(--ifm-leading));
+  max-height: 350px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  display: table;
+  width: 100%;
+  font-size: var(--body2-font-size);
+}
+
+table thead tr {
+  border-bottom: none !important;
+}
+
+.pagination-nav__link {
+  border: 1px solid var(--divider-color);
+}
+
+.pagination-nav__link:hover {
+  border: 1px solid var(--text-caption-color);
+}
+
+.pagination-nav__link--prev .pagination-nav__label::before,
+.pagination-nav__link--next .pagination-nav__label::after {
+  display: none !important;
+}
+
+.pagination-nav__sublabel {
+  font-weight: 400;
+}
