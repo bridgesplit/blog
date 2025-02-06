@@ -1,3 +1,8 @@
+# READ: Adding posts
+After adding a post, add the post to the list "allPosts" in src/js-components/posts.js to have it show on home page. Add featured tag to have it featured. The featured section will show the most recent post with the featured tag. If no posts are tagged as featured, it will show the most recent post.
+
+
+
 # Website
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
