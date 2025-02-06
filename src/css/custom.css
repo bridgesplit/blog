@@ -15,7 +15,7 @@ html[data-theme=dark] {
   /* Base */
   --primary-color: rgba(255, 255, 255, 0.95);
   --primary-background-color: rgba(255, 255, 255, 0.10);
-  --primary-background-color-light: rgb(13, 13, 13);
+  --primary-background-color-light: rgba(255, 255, 255, 0.05);
   --secondary-color: rgb(57, 78, 255);
   --secondary-background-color: rgb(124, 91, 255, 0.2);
 
@@ -23,10 +23,10 @@ html[data-theme=dark] {
   --text-caption-color: rgba(255, 255, 255, 0.60);
   --text-disabled-color: rgba(255, 255, 255, 0.40);
   --text-button-primary-color: rgba(21, 13, 53, 0.95);
-  --background-color: rgb(0, 0, 0);
+  --background-color: rgb(18, 20, 33);
   --background-card-color: var(--primary-background-color-light);
   --divider-color: rgba(255, 255, 255, 0.07);
-  --divider-color-dark: rgba(255, 255, 255, 0.14);
+  --divider-color-dark: rgba(255, 255, 255, 0.07);
   --border-radius: 4px;
   --body1-font-size: 16px;
   --body2-font-size: 14px;
@@ -387,11 +387,15 @@ p a {
 
 .navbar__brand,
 .navbar__brand:hover {
-  color: var(--text-body-color);
   align-items: center;
+  color: var(--text-caption-color) !important;
+
 
 }
+.navbar__title {
+  font-weight: 400 !important;
 
+}
 /* Footer */
 .footer__title {
   font-weight: var(--heading-font-wt);
