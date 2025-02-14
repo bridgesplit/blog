@@ -1,0 +1,65 @@
+---
+title: "Flex Appeal: Lending for Any Token"
+# description: Pool-based lending is dead. The market just doesn't know it yet. Limitations in collateral born from the pool model are holding back onchain lending.
+slug: flex-appeal
+tags: ['product']
+image: 'src/static/posts/flex-appeal.png'
+hide_table_of_contents: false
+date: 02-13-2025
+---
+
+<!-- truncate -->
+![](../static/img/posts/flex-appeal.png)
+
+# Flex Appeal: Lending for Any Token
+Pool-based lending is dead. The market just doesn’t know it yet. Limitations in collateral born from the pool model are holding back onchain lending.
+
+Look at what’s happening on Solana right now: widespread adoption of new token primitives.
+
+- SOL LSTs and restaking derivatives: $7B+ TVL
+- Meteora's MLP tokens: $1B+ TVL
+- Orca Whirlpool liquidity positions (NFTs): $300m+ TVL
+- Natively-staked SOL: 60% of all SOL
+
+And yet, few of these assets can _effectively_ be used as collateral in lending markets. This is a massive market inefficiency.
+
+The reason is simple: _pool-based lending protocols are fundamentally broken_:
+
+- Significant liquidity required to avoid volatile rates.
+- Lengthy governance processes to add new assets.
+- One-size-fits-all risk parameters independent of collateral quality constrains a pool by its riskiest collateral.
+- Naive pricing mechanisms (utilization curves) lead to overly conservative or risky terms for collateral.
+
+This model worked in DeFi 1.0 when we only had a handful of large-cap assets. It fails completely for DeFi 2.0’s long tail of structured products and derivatives.
+
+## How Loopscale fixes lending
+Loopscale’s model of Atomic Markets rewrites DeFi lending. Instead of pools, Loopscale uses direct order book matching. If a lender and borrower agree on terms, a market exists. That’s it. No minimum liquidity requirements. No governance overhead. No artificial constraints.
+
+This fundamental redesign onchain lending markets both unlocks liquidity for new assets _and improves LTVs and rates for established assets_.
+
+## New possibilities
+Here’s a few concrete examples of what Loopscale enables:
+
+- Orca liquidity providers can leverage liquidity positions, reducing the opportunity cost of providing liquidity. These liquidity providers can even adjust their positions while they are being used as collateral.
+- Any yield token can be used for a fixed-cost, leveraged yield strategy (see: Loopscale's Yield Loops).
+- Validators and native-stake SOL holders can access liquidity without reducing their stake or selling their positions.
+- Any liquid staking or restaking token can immediately find a lending market.
+- Traditional finance products, including undercollateralized loans and RWAs, can bridge into DeFi lending markets with custom terms and mechanics.
+
+## The imminent, systemic risks of pools
+November 2022: Aave pauses 17 markets due to CRV volatility caused by a massive short position. This is not a design tradeoff. It’s one of the many times the systemic risks of pools have shown themselves.
+
+The incident highlighted the core flaws of the pool model:
+
+**Risk from multi-collateral pools**: When Aave users deposit assets, they enter a shared pool where trouble in one market can spread to others.
+
+**One-size-fits-all parameters**: Pool-based protocols have uniform, governance-set parameters. Users cannot adjust collateral requirements or liquidation thresholds for their positions.
+
+In these scenarios, lending pools face a choice: shut down or blow up.
+
+Loopscale's Atomic Markets operate in complete isolation. If CRV faces volatility, it affects only CRV markets. Other markets continue normally. **This is the only way lending markets can scale to support hundreds of different assets**
+.
+## The path forward
+Loopscale bypasses traditional constraints that have limited DeFi lending, enabling lending markets based on actual demand to form naturally for any asset. Loopscale allows risk to be priced accurately and prevents systemic contagion. Loopscale provides practical solutions to real problems that exist in DeFi today.
+
+Pool-based lending won’t disappear overnight. But the direction is clear. The future of lending needs to support hundreds of assets with different risk profiles and market dynamics. Loopscale is the only approach that scales to meet these requirements.
