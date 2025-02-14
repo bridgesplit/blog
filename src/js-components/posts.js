@@ -1,8 +1,9 @@
+import {frontMatter as flexAppeal} from '@site/blog/flex-appeal.mdx';
 import {frontMatter as atomicMarkets} from '@site/blog/atomic-markets.mdx';
 import {frontMatter as closedBeta} from '@site/blog/closed-beta.mdx'
 
 // Add post to this line
-const allPosts = [atomicMarkets, closedBeta];
+const allPosts = [flexAppeal, atomicMarkets, closedBeta];
 
 // Don't edit below this line
 const BASE_TAGS = [
