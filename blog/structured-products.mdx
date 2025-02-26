@@ -1,0 +1,58 @@
+---
+title: "From Order Books to Yield Loops: How Loopscale Powers DeFi Structured Products"
+# description: DeFi has dismissed order books as complex and resource-intensive. But order books create a more powerful lending experience than many existing primitives in DeFi today.
+slug: structured-products
+tags: ['product']
+image: 'src/static/posts/structured-products.png'
+hide_table_of_contents: false
+date: 02-26-2025
+---
+
+<!-- truncate -->
+![](../static/img/posts/structured-products.png)
+
+# From Order Books to Yield Loops: How Loopscale Powers DeFi Structured Products
+
+
+DeFi has dismissed order books as complex and resource-intensive. But order books create a more powerful lending experience than many existing primitives in DeFi today. They simplify user experience by providing clear functionality without the need for complex pool mechanisms. Looking ahead: order books enable better sophisticated onchain structured products.
+
+In finance, structured products are pre-packaged strategies. Loopscale's first structured product is the Yield Loop: one-click leverage for yield-bearing tokens.
+
+Yield bearing tokens, like staked Solana and Jupiter's JLP, generate yield from onchain economic activity. Loopscale's Yield Loops give users the capability to lever these tokens, amplifying returns.
+
+## Yield Loops: Structured leverage
+In a Yield Loop, a token is used as collateral to borrow more of the same token. This creates a loop where both the initial deposit and borrowed tokens earn yield, multiplying returns. Loopscale automates this multi-step process and simplifies it into one action for the user.
+
+Here’s what happens behind the scenes, using @JupiterExchange's Solana liquid staking token (JupSOL) as an example. To lever up JupSOL via the  JupSOL-SOL Yield Loop, Loopscale performs the following:
+
+1. Loopscale borrows SOL with no collateral via a flash loan
+2. SOL is swapped for more JupSOL
+3. JupSOL is deposited as collateral in Loopscale
+4. SOL is borrowed against the JupSOL collateral
+5. Borrowed SOL repays the initial flash loan
+
+Loopscale executes these steps atomically. This means that all the above actions occur within a single transaction and revert if any step fails.
+
+The end result: a levered JupSOL position earning more yield as long as borrow rates are lower than the base JupSOL yield. **All accomplished with a single user action**.
+
+This is the power of orderbooks with the simplicity of modern DeFi UX.
+
+## Order books -> structured products
+This strategy has always been possible with traditional pool-based lending protocols—but Loopscale's order book model enables efficiency that pool-based incumbent strategies can't match.
+
+Yield Loops use Loopscale’s fixed-rate loans. This protects users from rate spikes that could turn profitable positions negative when a Yield Loop’s borrow rate exceeds the yield from the yield-bearing token.
+
+Loopscale defaults to 1-day fixed terms with automatic refinancing for short-term protection, plus weekly and monthly options for users wanting longer certainty.
+
+Furthermore: rates are better because lenders set rates based on specific collateral rather than a pool of different assets (as seen with the pool model). This means better rates when borrowing off USDC compared to borrowing off a pool containing other assets, some more volatile than others.
+
+Isolated positions prevent contagion across markets during volatility. And Yield Loops are (technically) possible for any market, as long as there are willing counterparties.
+
+This same architecture supports more sophisticated structures like tranches, structured credit, and RWAs—all from the same primitives.
+
+## Building beyond pools
+Loopscale enables onchain structured products that will operate beyond the constraints of traditional pool-based lending. Modularity is the foundation of true composability. When lending becomes a simple agreement between parties rather than an interface with an algorithmic pool, it becomes the groundwork for structured products like Yield Loops.
+
+Yield Loops have facilitated over $480M in volume during closed beta as of time of writing. The combination of fixed rates and atomic execution has made these strategies viable for both retail and institutional participants seeking leveraged exposure to yield-generating tokens.
+
+The future of DeFi requires infrastructure that can scale to support any asset—each with different risk profiles and market dynamics. Through order books, Loopscale delivers both the simplicity users expect and the sophistication that modern financial markets need.
